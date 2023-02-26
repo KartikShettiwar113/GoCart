@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller</title>
+</head>
+<style>
+    #date{
+        border-radius: 5px;
+    }
+    body{
+        background-color: rgb(172, 235, 247);
+    }
+</style>
+
+<script>
+function validate(){
+
+
+var a = document.getElementById("manufac").value
+if(a==""){alert("please enter name");
+return false;
+}
+
+var b = document.getElementById("shop").value
+if(b==""){
+    alert("please enter shop name");
+    return false;
+}
+
+var c = document.getElementById("add").value
+if(c==""){
+    alert("please enter your address");
+    return false;
+}
+
+var d = document.getElementById("nos").value
+if(isNaN(d) || d=="") alert("please enter a valid phone no.")
+ if(d.length<10) alert("please enter valid phone no.")
+}
+
+function ValidateForm(form){
+ErrorText= "";
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+
+</script>
+
+<body>
+    <H1 style="text-align: center; background-color: rgb(240, 245, 108);">SELLER</H1>
+    <form action="" onsubmit="validate()">
+        <table align="center" style="margin-top: 100px;">
+            <tr>
+                <td><label for="">Manager Name:</label></td>
+                <td><input type="text" id="manufac"></td>
+            </tr>
+            <tr>
+                <td><label for="">Shop/Showroom Name:</label></td>
+                <td><input type="text" id="shop"></td>
+            </tr>
+            <tr>
+                <td><label for="">Address:</label></td>
+                <td><textarea name="Address" id="add" cols="25" rows="5" placeholder="Enter Shop address..."></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Phone Number:</label></td>
+                <td><input type="text" id="nos"></td>
+            </tr>
+            <tr>
+                <td><label for="">Date:</label></td>
+                <td><input id="date" type="date"></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender:</label></td>
+                <td>
+                <label for="101">
+                <input type="radio" value="Male" name="gender" id="101">Male
+                </label>
+                <label for="102">
+                <input type="radio" value="Female" name="gender" id="102">Female
+                </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="" name="shipment">Shipment:</label></td>
+                <td>
+                <label for="111">
+                <input type="checkbox" name="shipment" value="Male" id="111">National
+                </label>
+                <label for="112">
+                <input type="checkbox" name="shipment" value="Female" id="112">International
+                </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">State: </label>
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Karnataka</option>
+                        <option value="">Kerela</option>
+                        <option value="" selected>Maharastra</option>
+                        <option value="">Delhi</option>
+                        <option value="">Jammu and Kashmir</option>
+                        <option value="">Gujrat</option>
+                    </select>
+                </td>
+            </tr>
+            <td><button style="height: 30px; width: 60px;" name="SubmitButton" onClick="ValidateForm(this.form)"><b>Submit</b></button>
+            <input type="reset" style="height: 30px; width: 60px;">
+            </td>
+            </table>
+    </form>
+</body>
+</html>

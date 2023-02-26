@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/26615572db.js" crossorigin="anonymous"></script>
+
+<script>
+    function plus(){
+        alert("GoCart Subscription Added!")
+    }
+</script>
+
+</head>
+
+<style>
+.buy{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: auto;
+}
+.kharid:hover .buy{
+    display: block;
+}
+</style>
+<body style="background-image: linear-gradient(to right , yellow , blue);">
+    <div style="display: flex; flex-direction: row;">
+    <div>
+    <i><h2>Fast Dilevery</h2></i>
+    <i><h2>Easy Access to Sails</h2></i>
+    <i><h2>Customer Support</h2></i>
+    <i><h2>Gifts</h2></i>
+    </div>
+    <div class="kharid"
+    style=" cursor: pointer;
+    height: 50px; width: 100px; background-color: orangered; margin: 75px; margin-left: 130px; margin-top: 90px; border-radius: 10px;
+    "> <p style="align-items: center; color: white"><b style="margin-left: 20px;">Buy Now</b></p>
+    <div class="buy">
+        <h3 style="margin-left: 25px;">299.99<i class="fa-solid fa-indian-rupee-sign" style="font-size: 10px; "></i></h3>
+        <button onclick="plus()" type="submit" style="background-color: rgb(31, 232, 31); cursor: pointer; margin-left: 30px;">Pay</button>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

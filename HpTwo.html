@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCart</title>
+    <link rel="stylesheet" href="CpTwo.css">
+    <link rel="icon" href="GoCart\Logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/26615572db.js" crossorigin="anonymous"></script>
+</head>
+<body alink="red" vlink="blue">
+<style>
+a{
+  text-decoration: none;
+}
+
+        .vertical {
+            border-left: 1px solid #555;
+            height: 200px;
+            position:absolute;
+            left: 35%;
+
+        }
+
+ 
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 200px;
+  padding: 10px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: white;
+  color:blue;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+  color: rgb(251, 248, 248);
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+  <!-- Header -->
+<header>
+
+<!--one-->
+  <div class="B">    
+    <div class="premium">
+        <div class="set">
+            <div class="logo">
+                    <img title="GoCart" src="GoCart\Screenshot_20230216_043534.png" alt="">
+            </div>
+            <div>
+                <a href="plus.html">
+                <p style="font-style: italic; color: rgb(249, 246, 246);">
+                Explore <span style="font-style: italic; color: yellow;" >Plus </span>
+                <img src="GoCart\plus_aef861.png" style="width: 15px" alt="">
+                </p>
+                </a>
+            </div>
+        </div>
+
+<!-- two -->
+      <div class="search">
+        <input class="inputA" type="text" placeholder="Search for products brands and more...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+
+     <button onclick="openForm()" style="background-color: blue; border: none; ">
+      <div style="margin: 20px;" class="login"><p style="margin: 5px; color: blue; font-size: 15px;">Login</p></div>
+    </button>
+     
+     
+      <div class="form-popup" id="myForm" style="position: absolute;bottom: 370px; right: 550px;">
+        <form class="form-container">
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <div style="display: flex;">
+          <button type="submit" class="btn"><b>Login</b></button>
+          <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+          </div>
+        </form>
+      </div>
+      
+     
+     
+     
+      <div class="Chu" style=" display: flex;justify-content: space-between;">
+      <div style="margin: 20px; font-size: 15px; color: white;" ><a href="sell.html" style="color: white; text-decoration: none;">Become a Seller</a></div>
+      <div class="more" style="margin: 20px; font-size: 15px; color: white;">About<i style="font-size: 12px;" class="fa-sharp fa-solid fa-angle-down"></i>
+      <div class="more_menu">
+        <div class="more_ki_list" style="align-items: center; display: flex; justify-content: center;">
+          <p style="color: blue; align-items: center; justify-content: center;">
+          <b><a  href="more.html" target="_self" style="text-decoration: none; ">About Web Page</a></b>
+          </p>
+        </div>
+      </div>
+      </div>
+      <div style="margin: 20px; font-size: 15px; color: white;"> <i style="font-size: 12px;" class="fa-solid fa-cart-shopping"></i>Cart</div>
+     <div style="margin: 20px; font-size: 15px; color: white;"><a href="products.html" style="color: #fdfcfc; text-decoration: none;">Products</a></div>
+
+
+    </div>
+</div>
+</header>
+
+
+<!-- images -->
+
+<main>
+  <nav>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Btwo.jpeg" alt="" style="height: 80px; background-color: white;">
+      <p>Beauty</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bseven.jpeg" alt="" style="height: 80px;">
+      <p>TWS</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Screenshot_20230219_045033.png" alt="" style="height: 80px; background-color: white;">
+      <p>iphones</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bthree.jpeg" alt="" style="height: 80px; background-color: white;">
+      <p>Kitchen</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bfive.jpeg" alt="" style="height: 80px; background-color: white;">
+      <p>Electronics</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bsix.jpeg" alt="" style="height: 80px; background-color: white;">
+      <p>Laptops</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bnine.jpg" alt="" style="height: 80px; background-color: white;">
+      <p>Watchs</p>
+    </div>
+    <div style=" display: flex ; flex-direction: column ;justify-content: center; align-items: center;">
+      <img src="GoCart\Bfour.jpeg" alt="" style="height: 80px; background-color: white;">
+      <p>Headphones</p>
+    </div>
+  </nav>
+</main>
+
+<!-- section-SlideShow -->
+
+<section aria-label="Newest Photos">
+<div class="carousel" data-carousel>
+
+  <button style="left: -1px;" class="carousel-button prev" data-carousel-button="prev"><i class="fa-solid fa-angle-left"></i></button> 
+  <button  class="carousel-button next" data-carousel-button="next"><i class="fa-solid fa-angle-right"></i></button>  
+ 
+  <ul data-slides>
+    <li class="slide" data-active>
+        <img src="GoCart\SSfour.png" alt="first" style="height: 280px; width: 99%;">
+    </li>
+    <li class="slide">
+        <img src="GoCart\SStwo.png" alt="second" style="height: 280px; width: 99%;">
+    </li>
+    <li class="slide">
+        <img src="GoCart\SSone.png"alt="third" style="height: 280px; width: 99%;">
+    </li>
+  </ul>
+</div>
+</section>
+
+<!-- div-Products -->
+
+<hr>
+<br>
+<footer>
+<div class="Lcol">
+
+<div class="ek">
+                <div style="  height: 350px; min-width: 250px; width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom , blue , pink);">
+                  <h1>Best of mobiles</h1>
+                  <button id="mob" style="height: 50px; margin: 30px; width: 100px; background-color: blueviolet; color: #ddd; font-size: 20px;"><a href="forall.html">View All</a></button>
+                </div>
+                <div>
+                        <div>
+                          <img class="image" src="pro\14 promax.jpg" alt="">
+                        </div>
+                        <div class="product">
+                                <p><b>Apple</b></p>
+                                <p>i Phone 14 ProMax</p>
+                                <p style="color: green;" >3% off</p>
+                        </div>
+                </div>
+                <div>
+                  <div>
+                    <img class="image" style="margin-left: 50px; width: 225px;" src="pro\Screenshot_20230219_073532.png" alt="">
+                  </div>
+                  <div class="product">
+                          <p><b>Apple</b></p>
+                          <p>i Phone 13 Plus</p>
+                          <p style="color: green;" >5% off</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img class="image" style="margin-left: -20px;"  src="pro\Screenshot_20230219_073802.png" alt="">
+                  </div>
+                  <div class="product">
+                          <p><b>Samsung</b></p>
+                          <p>S23 Ultra</p>
+                          <p style="color: green;" >2% off</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img class="image" style="width: 225px; margin-left: 40px;" src="pro\Screenshot_20230219_074029.png" alt="">
+                  </div>
+                  <div class="product">
+                          <p><b>One Plus</b></p>
+                          <p>One plus 11</p>
+                          <p style="color: green;" >14% off</p>
+                  </div>
+                </div>
+
+</div>
+<br>
+<hr>
+<br>
+
+<div class="do">
+  <div style="  height: 350px; min-width: 250px; width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom , rgb(248, 9, 9) , rgb(251, 7, 198));">
+    <h1>Best of Electronics</h1>
+    <button id="mob" style="height: 50px; margin: 30px; width: 100px; background-color: blueviolet; color: #ddd; font-size: 20px;"><a href="forall.html">View All</a></button>
+  </div>
+  <div>
+          <div>
+            <img class="image" style="height: 200px; width: 200px; margin: 50px;" src="pro\aalexa.jpeg" alt="">
+          </div>
+          <div class="product">
+                  <p><b>Amazon</b></p>
+                  <p>Alexa</p>
+                  <p style="color: green;" >20% off</p>
+          </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" style="margin-top: 5px; width: 225px; margin-left: 60px;" src="pro\Screenshot_20230219_074512.png" alt="">
+    </div>
+    <div class="product">
+            <p><b>Wipro</b></p>
+            <p>Copper+</p>
+            <p style="color: green;" >30% off</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" style="margin-top: 10px; width: 250px; margin-left: 20px;" src="pro\Screenshot_20230219_074335.png" alt="">
+    </div>
+    <div class="product">
+            <p><b>LG</b></p>
+            <p>INL508000</p>
+            <p style="color: green;" >5% off</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" style="margin-top: 40px; height: 250px; width: 250px; margin: 20px; " src="pro\vavum.jpeg" alt="">
+    </div>
+    <div class="product" style="margin-top: 20px;">
+            <p><b>Xiaomi</b></p>
+            <p>Vacum Cleanser 2</p>
+            <p style="color: green;" >39% off</p>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="teen">
+  <div style="  height: 350px; min-width: 250px; width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom , rgb(0, 255, 8) , rgb(251, 114, 2));">
+    <h1>Other products</h1>
+    <button id="mob" style="height: 50px; margin: 30px; width: 100px; background-color: blueviolet; color: #ddd; font-size: 20px;"><a href="forall.html">View All</a></button>
+  </div>
+  <div>
+          <div>
+            <img class="image" src="pro\Screenshot_20230219_074757.png" alt="">
+          </div>
+          <div class="product">
+                  <p><b>Puma</b></p>
+                  <p>Run Champ</p>
+                  <p style="color: green;" >13% off</p>
+          </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" style="height: 225px; width: 255px; margin: 35px;" src="pro\rog.png" alt="">
+    </div>
+    <div class="product">
+            <p><b>ROG</b></p>
+            <p>Strix</p>
+            <p style="color: green;" >29% off</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" src="pro\Screenshot_20230219_074557.png" alt="">
+    </div>
+    <div class="product">
+            <p><b>Sparx</b></p>
+            <p>Jogger</p>
+            <p style="color: green;" >26% off</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="image" style="margin: 35px; height: 225px; width: 225px;" src="pro\Screenshot_20230219_073619.png" alt="">
+    </div>
+    <div class="product">
+            <p><b>Apple</b></p>
+            <p>i Pad Pro</p>
+            <p style="color: green;" >8% off</p>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+</footer>
+
+
+<section class="last">
+<div class="onu">
+
+  <div class="Z">
+          <div id="q">
+                  <p style="color: #555;">ABOUT:</p>
+                  <br>
+                  <ul style="list-style-type: none; color: #ddd; line-height: 1.8em;">
+                  <li>Contact us</li>
+                  <li>About Us</li>
+                  <li>Whole Sale</li>
+                  </ul>
+          </div>
+
+          <div id="q">
+            <p style="color: #555;">HELP:</p>
+            <br>
+            <ul style="list-style-type: none; color: #ddd; line-height: 1.8em;">
+              <li>Payment</li>
+              <li>Shipment</li>
+              <li>Dilevery</li>
+              <li>FAQ</li>
+              <li>Cancel & Return</li>
+            </ul>
+          </div>
+
+          <div id="q">
+            <p style="color: #555;">SOCIAL:</p>
+            <br>
+            <ul style="list-style-type: none; color: #ddd; line-height: 1.8em;">
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
+
+          <div id="q">
+            <p style="color: #555; margin-left: 50px;">Address:</p>
+            <br>
+            <ul style="list-style-type: none; color: #ddd; line-height: 1.8em; margin-left: 50px;">
+              <li>
+                Near Ullasnagar,<br>
+                Banglore,Karnataka <br>
+                pincode:55-55-55;<br>
+                India.
+              </li>
+            </ul>
+          </div>
+
+  </div>
+
+  <div class = "vertical"></div>
+
+
+  <div class="Y">
+  </div>
+
+</div>
+
+
+<div style="height: 1px; width: 100%; background-color: #555;"></div>
+<hr>
+<div class="rendu">
+  <div style="display: flex; align-items: center;">
+    <i class="fa-brands fa-instagram" style="margin-top: 5px; margin-bottom:5px ; font-size: 20px; color: yellow; margin: 5px; margin-left: 100px;"></i><p style="font-size: 15px; color: white;">Instagram</p>
+    <i class="fa-brands fa-facebook" style="font-size: 20px; color: yellow; margin-left: 200px; margin-left: 200px; "></i><p style="font-size: 15px; color: white;"> Facebook</p>
+    <i class="fa-brands fa-twitter" style="font-size: 20px; color: yellow; margin-left: 50px; margin-left: 200px;"></i><p style="font-size: 15px; color: white;"> Twitter</p>
+  </div>
+</div>
+</section>
+<!-- products end -->
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+
+
+<script src="JpTwo.js" defer></script> 
+</body>
+</html>
