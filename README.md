@@ -1,2 +1,2 @@
 # GoCart
-My First Project HTML , JS , CSS
+My First Project on HTML , JS , CSS.
