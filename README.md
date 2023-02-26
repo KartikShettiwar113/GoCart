@@ -10,6 +10,5 @@ Here,
 1- .html file for "View all"
 
 in the main html document
-Total docs - 8
 
 rest 3 file are images used in the webpage building.
